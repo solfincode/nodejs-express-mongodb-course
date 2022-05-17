@@ -16,7 +16,9 @@ server.listen(PORT, () => console.log(`server is listening at ${PORT}`));
 */
 
 const express = require("express");
-const PORT = 8000;
+const dotenv = require("dotenv");
+dotenv.config();
+const PORT = process.env.PORT || 8000;
 const app = express();
 const cors = require("cors");
 
