@@ -1,3 +1,3 @@
-# Nodejs API Master class with express & mongo
+# Nodejs API Master class with express & mongodb
 
-this is udemy course for nodejs, express and mongo
+this is udemy course for nodejs, express and mongodb
