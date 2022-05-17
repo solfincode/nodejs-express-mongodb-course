@@ -25,5 +25,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
+//import router
+const homeRouter = require("./routes/Home");
+
+//routes
+app.use("/", homeRouter);
+
 //listening server
 app.listen(PORT, () => console.log(`server is listening at ${PORT}`));
