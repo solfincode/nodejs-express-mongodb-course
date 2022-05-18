@@ -1,24 +1,24 @@
 const express = require("express");
 const router = express.Router();
 
+//controllers
+const {
+  getBootcamps,
+  postBootcamps,
+  putBootcamps,
+  deleteBootcamps,
+} = require("../controllers/Bootcamp");
+
 //GET
-router.get("/", (req, res) => {
-  res.json({ msg: "hello world" });
-});
+router.get("/", getBootcamps);
 
 //POST
-router.post("/", (req, res) => {
-  res.json({ data: `post ${req.body.data}` });
-});
+router.post("/", postBootcamps);
 
 //UPDATE
-router.put("/:id", (req, res) => {
-  res.json({ data: `update ${req.params.id}` });
-});
+router.put("/:id", putBootcamps);
 
 //DELETE
-router.delete("/:id", (req, res) => {
-  res.json({ data: `delete ${req.params.id}` });
-});
+router.delete("/:id", deleteBootcamps);
 
 module.exports = router;
