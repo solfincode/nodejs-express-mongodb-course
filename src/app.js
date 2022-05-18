@@ -29,9 +29,11 @@ app.use(cors());
 
 //import router
 const homeRouter = require("./routes/Home");
+const BootcampRouter = require("./routes/Bootcamp");
 
 //routes
 app.use("/", homeRouter);
+app.use("/api/bootcamp", BootcampRouter);
 
 //listening server
 app.listen(PORT, () => console.log(`server is listening at ${PORT}`));
