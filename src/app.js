@@ -22,14 +22,18 @@ const PORT = process.env.PORT || 8000;
 const app = express();
 const cors = require("cors");
 
+const logger = require("./middleware/logger");
+
 //bodyparser
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
+app.use(logger);
 
 //import router
 const homeRouter = require("./routes/Home");
 const BootcampRouter = require("./routes/Bootcamp");
+const res = require("express/lib/response");
 
 //routes
 app.use("/", homeRouter);
