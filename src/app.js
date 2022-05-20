@@ -33,7 +33,6 @@ app.use(logger);
 //import router
 const homeRouter = require("./routes/Home");
 const BootcampRouter = require("./routes/Bootcamp");
-const res = require("express/lib/response");
 
 //routes
 app.use("/", homeRouter);
